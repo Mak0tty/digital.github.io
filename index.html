@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Outline digital</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Inter" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Muller" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+
+  <script src="js/cursor.js"></script>
+</head>
+
+<body>
+    <div class="cursor">
+        <div class="cursor__ball cursor__ball--big ">
+          <svg height="30" width="30">
+            <circle cx="15" cy="15" r="12" stroke-width="0"></circle>
+          </svg>
+        </div>
+        
+        <div class="cursor__ball cursor__ball--small">
+          <svg height="10" width="10">
+            <circle cx="5" cy="5" r="4" stroke-width="0"></circle>
+          </svg>
+        </div>
+    </div>
+
+    <div class="topnav so-row" id="one" data-color="#ffffff">
+        <a href="/"><img src="img/logo.png"></a>
+        <div class="navlist">
+            <a href="/projects">Projects</a>
+            <a href="/services">Services</a>
+            <a href="/contact">About</a>
+            <a href="/"><button>Contact us</button></a>
+        </div>
+    </div>
+
+    <div class="greet-cont">
+        <h1 id="greet-h1" class="hoverable">Design. Development. Strategy.</h1>
+    </div>
+
+    <div id="inbetween"></div>
+
+    <!-- <video class="greet-video" autoplay>
+        <source src="img/blob.mp4" type="video/mp4">\
+    </video> -->
+
+    <div class="greet-blob" id="two" data-color="#FFF3F9">
+        <img src="img/blob-1.png" id="blob">
+    </div>
+
+    <div id="index-about">
+        <h4>Who we are</h4>
+        <h2>We develop authentic projects that will not leave you indifferent.</h2>
+        <p>We design and develop Websites, Logos and Brand guidelines.</p>
+        <a href="/"><button class="button-1">Get in touch</button></a>
+    </div>
+    
+    <div id="three" data-color="#D2D5EF"></div>
+
+    <div class="index-services-cont so-row" id="services">
+        <h4>Our services</h4>
+        <div class="index-services">
+            <div class="i-services-card" data-aos="zoom-in" data-aos-delay="200">
+                <div class="i-services-text">
+                    <h3>Web design</h3>
+                    <p>Using our creative design skills, we can help you make your product even better by creating a site or application that appeals to your audience.</p>
+                    <a href="/projects"><button class="button-1">View cases</button></a>
+                </div>
+            </div>
+            <div class="i-services-card" data-aos="zoom-in" data-aos-delay="350">
+                <div class="i-services-text">
+                    <h3>Development</h3>
+                    <p>Using our creative design skills, we can help you make your product even better by creating a site or application that appeals to your audience.</p>
+                    <a href="/projects"><button class="button-1">View cases</button></a>
+                </div>
+            </div>
+            <div class="i-services-card" data-aos="zoom-in" data-aos-delay="500">
+                <div class="i-services-text">
+                    <h3>Branding</h3>
+                    <p>Using our creative design skills, we can help you make your product even better by creating a site or application that appeals to your audience.</p>
+                    <a href="/projects"><button class="button-1">View cases</button></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="four" data-color="#FAE1EE"></div>
+
+    <div class="index-projects-cont so-row" id="projects">
+        <div class="i-projects-card" id="p-card-1">
+            <img src="img/aes.jpg" id="p-card-1-img">
+            <!-- <div id="i-projects-text">
+                <h3>AES shop</h3>
+                <a href="/"><button class="button-1">Get in touch</button></a>
+            </div> -->
+        </div>
+
+        <div class="i-projects-card" id="p-card-2">
+            <img src="img/aes.jpg">
+            <!-- <div id="i-projects-text">
+                <h3>AES shop</h3>
+                <a href="/"><button class="button-1">Get in touch</button></a>
+            </div> -->
+        </div>
+    </div>
+
+
+    <div id="five" data-color="#FFFFFF"></div>
+
+    <div id="index-advant">
+        <h2>We develop authentic projects that will not leave you indifferent.</h2>
+        <p>We design and develop Websites, Logos and Brand guidelines. We design and develop Websites, Logos and Brand guidelines.</p>
+        <img src="img/hand.png">
+    </div>
+
+
+
+
+
+    <script>
+        // const cursorRounded = document.querySelector('.rounded');
+        // const moveCursor = (e)=> {
+        //     const mouseY = e.clientY;
+        //     const mouseX = e.clientX;
+        //     cursorRounded.style.transform = `translate3d(${mouseX}px, ${mouseY}px, 0)`;
+        //     cursorPointed.style.transform = `translate3d(${mouseX}px, ${mouseY}px, 0)`;
+        // }
+
+        // window.addEventListener('mousemove', moveCursor)
+
+        var one = "#ffffff",
+        two = "#FFF3F9",
+        three = "#D2D5EF",
+        four = "#FAE1EE",
+        five = "#FFFFFF";
+
+        $(window).on("scroll touchmove", function() {
+            if ($(document).scrollTop() >= $("#one").position().top) {
+                $('body').css('background', $("#one").attr("data-color")),
+                $('#greet-h1').css('display', ("block")),
+                $('#index-about').css('opacity', ("0")),
+                $('#blob').css('width', ("50%")),
+                $('#blob').css('opacity', ("1")),
+                $('#greet-h1').css('transition', (".5s")),
+                $('#index-about').css('transition', (".4s ease-out")),
+                $('#blob').css('transition', (".5s ease-out"));
+            };
+
+            if ($(document).scrollTop() > $("#inbetween").position().top) {
+                $('#greet-h1').css('display', ("none")),
+                $('#greet-h1').css('transition', (".5s"));
+            };
+
+            if ($(document).scrollTop() > $("#two").position().top) {
+                $('#index-about').css('opacity', ("1")),
+                $('#blob').css('width', ("45%")),
+                $('#blob').css('opacity', (".4")),
+                $('#index-about').css('transition', (".4s ease-out")),
+                $('#blob').css('transition', (".5s ease-out"));
+            };
+
+            if ($(document).scrollTop() > $("#three").position().top) {
+                $('body').css('background', $("#three").attr("data-color"));
+            };
+
+            if ($(document).scrollTop() > $("#four").position().top) {
+                $('body').css('background', $("#four").attr("data-color"));
+            };
+            
+            if ($(document).scrollTop() > $("#five").position().top) {
+                $('body').css('background', $("#five").attr("data-color"));
+            };
+        });
+
+
+        // document.addEventListener('scroll', (e) => {
+        //     if (window.scrollY >= 20) {
+        //         const element = document.getElementById("two");
+        //         element.scrollIntoView();
+        //     }
+        // });
+
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+</html>
